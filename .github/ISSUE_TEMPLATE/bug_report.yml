@@ -1,0 +1,41 @@
+name: 🐞 Bug report
+description: Something broke in Rebirth or the launcher.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Rebirth version
+      description: Shown at the bottom of the launcher, for example 0.1.0.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where did it happen?
+      options:
+        - Launcher / install / update
+        - In game (skirmish)
+        - In game (LAN / multiplayer)
+        - Menus and options
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead. Include the map, the faction and the units if it's in game.
+    validations:
+      required: true
+  - type: textarea
+    id: shots
+    attributes:
+      label: Screenshots or error text
+      description: Drag a screenshot in here, or paste the error message.
+  - type: input
+    id: pc
+    attributes:
+      label: Your PC
+      description: Windows version, graphics card, screen resolution, GOG or Steam copy.
