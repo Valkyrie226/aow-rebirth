@@ -1,0 +1,42 @@
+name: 💡 Suggestion
+description: Post an idea for Rebirth. Others vote with a 👍.
+title: "[Idea] "
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One idea per post, so people can vote on it. The most-wanted ideas get built and playtested. If it ships, the news post says whose idea it was.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - New unit
+        - New faction
+        - Map
+        - Balance
+        - Game mechanic
+        - Interface and controls
+        - Online and launcher
+        - Website
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: hub
+    attributes:
+      label: Which hub?
+      options:
+        - Rebirth
+        - OG
+        - Both
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Describe it
+      description: What should change, and why would it make matches better?
+    validations:
+      required: true
